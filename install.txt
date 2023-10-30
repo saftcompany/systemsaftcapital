@@ -1,0 +1,44 @@
+Requirements: 
+PHP version >= 8.1.x
+Node +12 so u can run the yarn and yarn production commands
+
+Recommend use Virtualmin install Script:
+https://mashdiv.gitbook.io/bicrypto/guides/install/empty-vps
+
+Install:
+
+1. Create Database and Import bicrypto.sql
+2. Upload and Unzip bicrypto.zip
+3. Edit file .env
+Change info your domain and database.
+4. Use SSH or Terminal your server (or hosting), go to root folder install scripts and run:
+
+yarn
+yarn build
+composer dump-autoload
+composer update
+php artisan key:generate
+php artisan storage:link
+php artisan optimize:clear
+php artisan optimize
+
+
+
+5. Done!
+
+Demo Admin:
+    user: admin
+    pass: doniaweb.com
+
+
+Please read all Doc Requirements Install:
+https://mashdiv.gitbook.io/bicrypto/guides/fix-issues
+https://mashdiv.gitbook.io/bicrypto/guides/install/cpanel
+https://mashdiv.gitbook.io/bicrypto/guides/requirements-and-usage
+
+All Docuument:
+https://mashdiv.gitbook.io/bicrypto/
+
+
+Cors Install:
+https://mashdiv.gitbook.io/bicrypto/guides/advanced-stage/cors-anywhere
